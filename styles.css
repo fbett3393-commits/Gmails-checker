@@ -9,11 +9,12 @@ body {
     background: linear-gradient(135deg, #6e7e7e, #2f3e4e);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
+    height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     color: white;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 @keyframes gradientAnimation {
@@ -24,23 +25,23 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 600px;
+    max-width: 800px; /* Wider container for full screen feel */
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #333;
 }
 
 .subheading {
-    font-size: 18px;
+    font-size: 20px;
     color: #555;
     margin-bottom: 20px;
 }
@@ -114,4 +115,4 @@ button:hover {
     0% { transform: translateX(10px); }
     50% { transform: translateX(-10px); }
     100% { transform: translateX(0); }
-}
+    }
