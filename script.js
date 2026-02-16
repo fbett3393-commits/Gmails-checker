@@ -6,9 +6,9 @@ document.getElementById("checkButton").addEventListener("click", function() {
     emails.forEach(email => {
         const isValid = validateEmail(email);
         if (isValid) {
-            resultHtml += `<p style="color: green;">${email} - Live</p>`;
+            resultHtml += `<p class="live-email">${email} - Live</p>`;
         } else {
-            resultHtml += `<p style="color: red;">${email} - Invalid</p>`;
+            resultHtml += `<p class="invalid-email">${email} - Invalid</p>`;
         }
     });
 
@@ -19,4 +19,4 @@ function validateEmail(email) {
     // Basic email regex pattern (checks format, not actual existence)
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
-                                                        }
+}
